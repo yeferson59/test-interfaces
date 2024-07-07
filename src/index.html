@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./styles/index.css">
+        <title>Mi app</title>
+    </head>
+    <body class="min-h-screen max-w-4xl mx-auto py-4 bg-[#FFFFFF]">
+        <section
+            class="flex flex-col justify-center items-center bg-[#1A2130] border-2 rounded-lg px-40 py-4 text-[#FDFFE2] w-full" id="sectionSignIn">
+            <h1 class="font-semibold text-2xl">Inicio de sesión</h1>
+            <form class="flex flex-col justify-center my-4 gap-6 w-full" id="signIn">
+                <div class="border-b-2 border-[#5A72A0]">
+                    <input type="text" name="username" aria-label="username" class="focus:outline-none bg-[#1A2130] w-full"
+                        required placeholder="Nombre de usuario">
+                </div>
+                <div class="border-b-2 border-[#5A72A0] flex">
+                    <input type="password" name="password" aria-label="password"
+                        class="focus:outline-none bg-[#1A2130] w-full" required placeholder="Contraseña" id="password">
+                    <input type="checkbox" id="passwordText">
+                </div>
+                <button type="submit" class="bg-[#5A72A0] rounded-md text-pretty font-semibold p-2 mx-10">
+                    Iniciar sesión
+                </button>
+            </form>
+            <p>¿Todavía no tienes cuenta?</p>
+        </section>
+
+        <section class="flex flex-col justify-center items-center bg-[#1A2130] border-2 rounded-lg px-40 py-4 text-[#FDFFE2] w-full" id="sectionSignUp">
+            <h1 class="font-semibold text-2xl">Registrarse</h1>
+            <form class="flex flex-col justify-center my-4 gap-6 w-full" id="signUp">
+                <div class="border-b-2 border-[#5A72A0]">
+                    <input type="text" name="fullName" aria-label="fullName" class="focus:outline-none bg-[#1A2130] w-full"
+                        required placeholder="Nombres">
+                </div>
+                <div class="border-b-2 border-[#5A72A0]">
+                    <input type="text" name="lastName" aria-label="lastName"
+                        class="focus:outline-none bg-[#1A2130] w-full" required placeholder="Primer apellido">
+                </div>
+                <div class="border-b-2 border-[#5A72A0]">
+                    <input type="text" name="lastName2" aria-label="lastName2"
+                        class="focus:outline-none bg-[#1A2130] w-full" required placeholder="Segundo apellido">
+                </div>
+                <div class="border-b-2 border-[#5A72A0]">
+                    <input type="number" name="numberId" aria-label="numberId"
+                        class="focus:outline-none bg-[#1A2130] w-full" required placeholder="Numero de identidad">
+                </div>
+                <div class="border-b-2 border-[#5A72A0]">
+                    <input type="date" name="birthday" aria-label="birthday"
+                        class="focus:outline-none bg-[#1A2130] w-full" required placeholder="Fecha de nacimiento">
+                </div>
+                <button type="submit" class="bg-[#5A72A0] rounded-md text-pretty font-semibold p-2 mx-10">
+                    Guardar
+                </button>
+            </form>
+        </section>
+
+        <section id="sectionError" class="hidden flex-col justify-center items-center bg-[#1A2130] border-2 rounded-lg px-40 py-4 text-[#FDFFE2] w-full gap-4">
+            <h2 class="font-bold text-2xl text-pretty"><span id="messageError"></span></h2>
+            <button type="button" class="bg-[#5A72A0] rounded-md text-pretty font-semibold p-2 mx-10" id="back">Volver</button>
+        </section>
+    </body>
+    <script src="./index.js"></script>
+</html>
